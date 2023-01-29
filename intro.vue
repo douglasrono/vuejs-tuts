@@ -1,11 +1,20 @@
 
 <div id="app">
-<h1>{{ message }}</h1>
+  <button @click="count++">
+    Count is: {{ count }}
+  </button>
 </div>
 
+
 <script>
-var myObject = new Vue({
-    el: '#app',
-    data: {message: 'Hello Vue!'}
-})
+import { createApp } from 'vue'
+
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
+
 </script>
